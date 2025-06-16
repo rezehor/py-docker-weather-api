@@ -27,7 +27,7 @@ def get_weather() -> None:
         condition = data["current"]["condition"]["text"]
         print(f"Weather in {location}({country}): {temp_c}°C, {condition}")
     else:
-        print("Error", response.status_code)
+        print("Error", response.status_code, response.text)
 
 
 if __name__ == "__main__":
